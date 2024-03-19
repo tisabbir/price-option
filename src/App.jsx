@@ -1,4 +1,5 @@
 import "./App.css";
+import ChartLine from "./components/ChartLine/ChartLine";
 import DaisyNav from "./components/Daisy-Nav/DaisyNav";
 import Hello from "./components/HelloWorld/Hello";
 import Navbar from "./components/Navbar/Navbar";
@@ -11,6 +12,7 @@ function App() {
       <Navbar></Navbar>
       <Hello></Hello>
       <PriceOptions></PriceOptions>
+      <ChartLine></ChartLine>
     </div>
   );
 }
