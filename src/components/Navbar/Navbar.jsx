@@ -1,5 +1,8 @@
-import Link from "../Link/Link";
+import { useState } from "react";
+import { MdOutlineClose } from "react-icons/md";
+import { RiMenu2Fill } from "react-icons/ri";
 
+import Link from "../Link/Link";
 const Navbar = () => {
   const routes = [
     { id: 1, path: "/", name: "Home" },
@@ -9,8 +12,23 @@ const Navbar = () => {
     { id: 5, path: "/dashboard", name: "Dashboard" },
   ];
 
+  const [open, setOpen] = useState(false);
+
   return (
     <nav>
+      <div
+        onClick={() => {
+          return setOpen(!open);
+        }}
+        className="text-2xl"
+      >
+        {open === true ? (
+          <MdOutlineClose></MdOutlineClose>
+        ) : (
+          <RiMenu2Fill className=""></RiMenu2Fill>
+        )}
+      </div>
+
       <ul className="md:flex">
         {routes.map((route) => (
           <Link key={route.id} route={route}></Link>
