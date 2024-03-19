@@ -20,7 +20,7 @@ const Navbar = () => {
         onClick={() => {
           return setOpen(!open);
         }}
-        className="text-2xl"
+        className="text-2xl md:hidden"
       >
         {open === true ? (
           <MdOutlineClose></MdOutlineClose>
@@ -30,7 +30,7 @@ const Navbar = () => {
       </div>
 
       <ul
-        className={`md:flex absolute duration-1000 bg-cyan-300 
+        className={`md:flex absolute md:static duration-1000 bg-cyan-300 
       ${open === true ? "top-24" : "-top-52"}
       rounded-xl p-4 `}
       >
